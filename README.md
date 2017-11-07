@@ -16,6 +16,12 @@ See [#2](https://github.com/gr2m/octokit-release-asset-upload/issues/2) for more
 
 ## Usage
 
+See [options](#options) below. The `octokitReleaseAssetUpload` method resolves
+with [the response from the GitHub API](https://developer.github.com/v3/repos/releases/#upload-a-release-asset)
+and an additional `.release` property which is the [release response](https://developer.github.com/v3/repos/releases/#get-a-single-release).
+
+See list of potential [errors](#errors) below.
+
 As Node module
 
 ```js
@@ -217,6 +223,47 @@ $ npx octokit-release-asset-upload \
       </td>
     </tr>
   </tbody>
+</table>
+
+## Errors
+
+<table>
+  <thead>
+    <tr>
+      <th>
+        Status
+      </th>
+      <th>
+        Message
+      </th>
+      <th>
+        Description
+      </th>
+    </tr>
+  </thead>
+  <tr>
+    <th>
+      <code>400</code>
+    </th>
+    <td>
+      Invalid options
+    </td>
+    <td>
+      See message for more details
+    </td>
+  </tr>
+  <tr>
+    <th>
+      <code>422</code>
+    </th>
+    <td>
+      Validation Failed
+    </td>
+    <td>
+      An asset with the passed name already exists.
+      Run with <code>replace: true</code> to overwrite it.
+    </td>
+  </tr>
 </table>
 
 ## Similar solutions
