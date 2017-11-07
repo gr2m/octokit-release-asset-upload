@@ -17,7 +17,8 @@
     "pretest": "standard",
     "test": "nyc ava",
     "test:e2e": "test/end-to-end/cli.test.sh",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "postsemantic-release": "scripts/upload-build.sh"
   },
   "keywords": [
     "github",
