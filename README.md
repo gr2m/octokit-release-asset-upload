@@ -6,6 +6,10 @@
 [![Coverage Status](https://coveralls.io/repos/gr2m/octokit-release-asset-upload/badge.svg?branch=master)](https://coveralls.io/github/gr2m/octokit-release-asset-upload?branch=master)
 [![Greenkeeper badge](https://badges.greenkeeper.io/gr2m/octokit-release-asset-upload.svg)](https://greenkeeper.io/)
 
+## ⚠️ currently not working in browser
+
+See [#1](https://github.com/gr2m/octokit-release-asset-upload/issues/1) for more information.
+
 ## Usage
 
 As Node module
