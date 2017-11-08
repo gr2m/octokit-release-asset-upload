@@ -250,6 +250,17 @@ $ npx octokit-release-asset-upload \
   </tr>
   <tr>
     <th>
+      <code>401</code>
+    </th>
+    <td>
+      Credentials missing / Bad credentials
+    </td>
+    <td>
+      Either the past credentials are invalid, or no credentials have been passed.
+    </td>
+  </tr>
+  <tr>
+    <th>
       <code>422</code>
     </th>
     <td>
