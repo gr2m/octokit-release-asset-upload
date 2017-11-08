@@ -10,10 +10,6 @@
 
 See [#1](https://github.com/gr2m/octokit-release-asset-upload/issues/1) for more information.
 
-## ⚠️ uploading with {replace: true} fails
-
-See [#2](https://github.com/gr2m/octokit-release-asset-upload/issues/2) for more information.
-
 ## Usage
 
 See [options](#options) below. The `octokitReleaseAssetUpload` method resolves
