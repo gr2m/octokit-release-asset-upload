@@ -40,7 +40,7 @@ octokitReleaseAssetUpload({
 
 In Browser
 
-```js
+```html
 <input type="file" id="input">
 <script src="octokit-release-asset-upload.min.js"></script>
 <script>
