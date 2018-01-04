@@ -32,7 +32,7 @@
   "devDependencies": {
     "@octokit/fixtures": "^4.2.0",
     "ava": "^0.24.0",
-    "browserify": "^14.5.0",
+    "browserify": "^15.0.0",
     "coveralls": "^3.0.0",
     "mkdirp": "^0.5.1",
     "nyc": "^11.3.0",
