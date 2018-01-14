@@ -16,7 +16,7 @@ test.only('asset conflict with replace', async t => {
     replace: true
   }).catch(mock.explain)
 
-  t.is(result.id, 1)
+  t.is(result.id, 1001)
   t.is(result.name, 'test-upload.txt')
   t.is(result.label, 'test')
 })

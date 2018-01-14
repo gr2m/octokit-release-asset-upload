@@ -16,7 +16,7 @@ test('happy path', async t => {
     token: '0000000000000000000000000000000000000001'
   }).catch(mock.explain)
 
-  t.is(result.id, 1)
+  t.is(result.id, 1000)
   t.is(result.name, 'test-upload.txt')
   t.is(result.label, 'test')
 })
