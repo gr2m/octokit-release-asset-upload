@@ -6,6 +6,8 @@ notifications:
   email: false
 node_js:
   - '8'
+  - '9'
+  
 # Trigger a push build on master and greenkeeper branches + PRs build on every branches
 # Avoid double build on PRs (See https://github.com/travis-ci/travis-ci/issues/1147)
 branches:
@@ -13,12 +15,14 @@ branches:
     - master
     - /^greenkeeper.*$/
 
-script: npm run $COMMAND
-env:
-  matrix:
-    - COMMAND=test
-    - COMMAND=test:e2e
-    - COMMAND=coverage:upload
+script:
+  - npm run test
+  - npm run test:e2e
 
-after_success:
-  - npm run semantic-release
+jobs:
+  include:
+    - stage: release
+      node_js: lts/*
+      script: npm run semantic-release
+    - stage: coverage
+      script: npm run coverage:upload

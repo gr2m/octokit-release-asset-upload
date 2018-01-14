@@ -17,8 +17,8 @@
     "pretest": "standard",
     "test": "nyc ava",
     "test:e2e": "test/end-to-end/cli.test.sh",
-    "semantic-release": "semantic-release",
-    "postsemantic-release": "scripts/upload-build.sh"
+    "presemantic-release": "npm run build",
+    "semantic-release": "semantic-release"
   },
   "keywords": [
     "github",
@@ -38,7 +38,7 @@
     "nyc": "^11.3.0",
     "proxyquire": "^1.8.0",
     "rimraf": "^2.6.2",
-    "semantic-release": "^11.0.2",
+    "semantic-release": "^12.2.2",
     "simple-mock": "^0.8.0",
     "standard": "^10.0.3"
   },
@@ -52,5 +52,14 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/gr2m/octokit-release-asset-upload.git"
+  },
+  "release": {
+    "publish": [
+      "@semantic-release/npm",
+      {
+        "path": "@semantic-release/github",
+        "assets": ["dist/*.js"]
+      }
+    ]
   }
 }
