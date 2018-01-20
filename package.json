@@ -30,7 +30,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "@octokit/fixtures": "^5.5.2",
+    "@octokit/fixtures": "^6.0.0",
     "ava": "^0.24.0",
     "browserify": "^15.0.0",
     "coveralls": "^3.0.0",
