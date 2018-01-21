@@ -13,8 +13,6 @@ branches:
     - master
     - /^greenkeeper.*$/
 
-script: npm run test && npm run test:e2e
-
 stages:
   - test
   - name: release
@@ -22,6 +20,8 @@ stages:
 
 jobs:
   include:
+    - stage: test
+      script: npm run test && npm run test:e2e
     - stage: release
       node_js: lts/*
       script: npm run semantic-release
