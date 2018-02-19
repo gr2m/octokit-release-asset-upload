@@ -79,11 +79,11 @@ upload({
   replace: argv.replace
 })
 
-.then(result => {
-  console.log(`${fileName} uploaded to ${releaseUrl}`)
-})
+  .then(result => {
+    console.log(`${fileName} uploaded to ${releaseUrl}`)
+  })
 
-.catch(error => {
-  console.log(error)
-  process.exit(1)
-})
+  .catch(error => {
+    console.log(error)
+    process.exit(1)
+  })
