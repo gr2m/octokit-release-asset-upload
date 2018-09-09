@@ -4,7 +4,7 @@ const test = require('ava')
 test('without tag', async t => {
   t.plan(2)
   const getRelease = proxyquire('../../lib/get-release', {
-    './request': async ({url}) => {
+    './request': async ({ url }) => {
       t.is(url, 'https://api.github.com/repos/octokit-fixture-org/release-assets/releases/latest')
       throw new Error('test')
     }

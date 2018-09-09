@@ -12,7 +12,7 @@ async function octokitReleaseAssetUpload (input) {
 
   try {
     const upload = await uploadAsset(release, options)
-    return Object.assign(upload, {release})
+    return Object.assign(upload, { release })
   } catch (error) {
     // GitHub API returns 422 if an asset with the same name was already
     // uploaded to the given release. If the `replace` option is truthy,
@@ -26,6 +26,6 @@ async function octokitReleaseAssetUpload (input) {
 
     await deleteAsset(release, options)
     const upload = await uploadAsset(release, options)
-    return Object.assign(upload, {release})
+    return Object.assign(upload, { release })
   }
 }

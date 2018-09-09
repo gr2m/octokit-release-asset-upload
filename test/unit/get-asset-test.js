@@ -14,7 +14,7 @@ test('connection error', async t => {
   })
 
   try {
-    await getAsset({id: 123}, {})
+    await getAsset({ id: 123 }, {})
   } catch (error) {
     t.is(error.message, 'Unauthorized')
   }
